@@ -1,0 +1,13 @@
+server:
+  port: 8081
+
+spring:
+  kafka:
+    bootstrap-servers: 192.168.56.111:9092 # kafka 설치 서버 및 port
+    producer:
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.springframework.kafka.support.serializer.JsonSerializer
+    properties:
+      security.protocol: PLAINTEXT # 보안 방식
+
+
